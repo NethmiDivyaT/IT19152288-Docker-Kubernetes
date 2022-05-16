@@ -28,5 +28,3 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/it19152288:Latest
-          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/nodeproject:buildcache
-          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/nodeproject:buildcache,mode=max
