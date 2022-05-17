@@ -1,0 +1,17 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: kubernetes-project-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: my-kubernetes-project
+    spec:
+      containers:
+      - name: it19152288
+        image: nethmitharushika99/it19152288:latest
+        ports:
+        - targetPort: 9002
+          port: 80
