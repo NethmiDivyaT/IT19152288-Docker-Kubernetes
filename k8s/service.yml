@@ -9,9 +9,14 @@ spec:
       labels:
         app: my-kubernetes-project
     spec:
+      clusterIP: 10.72.5.44
       containers:
       - name: it19152288
         image: nethmitharushika99/it19152288:latest
         ports:
-        - targetPort: 9002
+        - targetPort: 80
           port: 80
+status:
+  loadBalancer:
+    ingress:
+    - ip: 34.83.107.67
